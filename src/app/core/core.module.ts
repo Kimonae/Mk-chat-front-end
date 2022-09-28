@@ -7,17 +7,19 @@ import { RouterModule } from '@angular/router';
 import { UiModule } from '../ui/ui.module';
 import { TemplatesModule } from '../templates/templates.module';
 import { IconsModule } from '../icons/icons/icons.module';
+import { TchatroomsModule } from '../tchatrooms/tchatrooms.module';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
     NavComponent,
-    FooterComponent
+    FooterComponent,
+
   ],
   imports: [CommonModule,
   RouterModule],
-  exports: [UiModule, IconsModule, TemplatesModule, HeaderComponent, NavComponent, FooterComponent]
+  exports: [UiModule, IconsModule, TemplatesModule, HeaderComponent, NavComponent, FooterComponent, TchatroomsModule]
 
 })
 export class CoreModule { }

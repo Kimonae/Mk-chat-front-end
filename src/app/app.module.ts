@@ -21,7 +21,6 @@ import { TableLightComponent } from './shared/components/table-light/table-light
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    AppRoutingModule,
     HttpClientModule
   ],
   providers: [],

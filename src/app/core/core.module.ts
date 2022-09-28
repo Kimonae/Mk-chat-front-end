@@ -13,7 +13,8 @@ import { IconsModule } from '../icons/icons/icons.module';
   declarations: [
     HeaderComponent,
     NavComponent,
-    FooterComponent
+    FooterComponent,
+
   ],
   imports: [CommonModule,
   RouterModule],

@@ -8,6 +8,7 @@ import { CoreModule } from './core/core.module';
   declarations: [
     AppComponent,
 
+
   ],
   imports: [
     BrowserModule,
@@ -15,6 +16,9 @@ import { CoreModule } from './core/core.module';
     CoreModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [
+
+  ]
 })
 export class AppModule { }

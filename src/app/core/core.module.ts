@@ -17,7 +17,7 @@ import { IconsModule } from '../icons/icons/icons.module';
   ],
   imports: [CommonModule,
   RouterModule],
-  exports: [UiModule, IconsModule, TemplatesModule, HeaderComponent, NavComponent, FooterComponent]
+  exports: [UiModule, IconsModule, TemplatesModule, HeaderComponent, NavComponent, FooterComponent],
 
 })
 export class CoreModule { }

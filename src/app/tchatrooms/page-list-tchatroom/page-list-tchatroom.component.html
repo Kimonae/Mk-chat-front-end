@@ -1,1 +1,13 @@
-<p>page-list-tchatroom works!</p>
+<!-- pipe async à faire, boucler sur les rooms -->
+<div *ngIf="Rooms$ | async as collection">
+<tr *ngFor="let item of collection" >
+  <th scope="row">1</th>
+  <td>{{item.name }}</td>
+  <td>{{item.CreationDate}}</td>
+
+
+
+</tr>
+</div>
+
+<p> Là nav </p>

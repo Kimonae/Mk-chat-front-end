@@ -4,6 +4,7 @@ import { PageListMessagesComponent } from './pages/page-list-messages/page-list-
 
 const routes: Routes = [
   {path: '', component: PageListMessagesComponent},
+ 
 ];
 
 @NgModule({

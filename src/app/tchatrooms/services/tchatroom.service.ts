@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { BehaviorSubject, map, Observable } from 'rxjs';
+import { Message } from 'src/app/core/models/message';
 import { Tchatroom } from 'src/app/core/models/tchatroom';
 import { environment } from 'src/environments/environment';
 
@@ -8,13 +9,16 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class TchatroomService {
-  private urlApi = environment.urlApi;
-  private collection$!: Observable<Tchatroom[]>;
+  urlApi = environment.urlApi;
+    collection$!: Observable<Tchatroom[]>;
+
+//observable
+  public  roomCanal: BehaviorSubject<any> = new BehaviorSubject<any>(0);
 
   constructor(private http: HttpClient) {
     this.collection = this.http
-      .get<Tchatroom[]>(`${this.urlApi}/tchatroom`)
-      .pipe(
+      .get<Tchatroom[]>(`${this.urlApi}/chatroom/allrooms` )
+     .pipe(
         map((tab) => {
           return tab.map((obj) => {
             return new Tchatroom(obj);
@@ -34,18 +38,24 @@ export class TchatroomService {
 
   }
 
-  update(obj: Tchatroom) {
+  update(obj: Tchatroom):Observable<Tchatroom> {
 
 
-    return this.http.put(`${this.urlApi}/tchatroom/${obj.id}`, obj)
+    return this.http.put<Tchatroom>(`${this.urlApi}/chatroom/${obj.id}`, obj)
   }
 
   add(item : Tchatroom): Observable<Tchatroom> {
 
-    return this.http.post<Tchatroom>(`${this.urlApi}/tchatroom`, item);
+    return this.http.post<Tchatroom>(`${this.urlApi}/chatroom`, item);
   }
 
   getItemById(id: number): Observable<Tchatroom>{
-   return this.http.get<Tchatroom>(`${this.urlApi}/tchatroom/${id}`);
+   return this.http.get<Tchatroom>(`${this.urlApi}/chatroom/${id}`);
   }
+
+
+  getMessageByRoom(id: number):Observable<Message[]>{
+    return this.http.get<Message[]>(`${this.urlApi}/chatroom/allrooms/${id}`);
+   }
+
 }

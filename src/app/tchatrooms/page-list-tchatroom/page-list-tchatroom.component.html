@@ -1,1 +1,7 @@
-<p>page-list-tchatroom works!</p>
+
+
+<div class="list-group" *ngFor='let item of collection$ |async as collection' >
+
+  <button (click)='onRoom(item)' type="button" class="list-group-item list-group-item-action">{{item.name | uppercase }} </button>
+
+</div>

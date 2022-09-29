@@ -11,6 +11,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { FormMessageComponent } from './components/footer/components/form-message/form-message.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MessagesModule } from '../messages/messages.module';
+import { PageListTchatroomComponent } from '../tchatrooms/page-list-tchatroom/page-list-tchatroom.component';
+import { TchatroomsModule } from '../tchatrooms/tchatrooms.module';
 
 
 @NgModule({
@@ -22,7 +24,8 @@ import { MessagesModule } from '../messages/messages.module';
   ],
   imports: [CommonModule,
   RouterModule,
-  ReactiveFormsModule
+  ReactiveFormsModule,
+  TchatroomsModule
 ],
   exports: [
     UiModule,
@@ -31,7 +34,8 @@ import { MessagesModule } from '../messages/messages.module';
     HeaderComponent,
     NavComponent,
     FooterComponent,
-    MessagesModule
+    MessagesModule,
+
   ],
 
 })

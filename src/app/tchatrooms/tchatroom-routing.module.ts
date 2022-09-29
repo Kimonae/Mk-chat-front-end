@@ -4,7 +4,7 @@ import { PageListTchatroomComponent } from './page-list-tchatroom/page-list-tcha
 
 
 const routes: Routes = [
-
+  {path:'',component:PageListTchatroomComponent},
 {path : 'tchatroom/:id', component: PageListTchatroomComponent}
 
 

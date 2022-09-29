@@ -6,6 +6,7 @@ import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
 import { TableLightComponent } from './shared/components/table-light/table-light/table-light.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,14 +17,13 @@ import { TableLightComponent } from './shared/components/table-light/table-light
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-
-    AppRoutingModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [
 
   ],
   bootstrap: [
+
     AppComponent
   ],
   exports: [

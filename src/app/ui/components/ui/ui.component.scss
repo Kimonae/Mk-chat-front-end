@@ -3,7 +3,7 @@
 /// Description design of user interface
 header {
   height: 65px;
-  background: var(--app-light);
+  background: var(--app-secondary);
   padding: 0 $gutter;
   display: flex;
   align-items: center;
@@ -16,7 +16,9 @@ main {
 }
 
 aside {
-  background: var(--app-darklight2);
+  background: var(--app-primary);
+  color: #fff;
+  padding: 10px 0 10px 10px;
   width: 250px;
   min-height: 100vh;
   position: fixed;

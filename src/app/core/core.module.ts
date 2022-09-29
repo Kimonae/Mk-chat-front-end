@@ -7,10 +7,11 @@ import { RouterModule } from '@angular/router';
 import { UiModule } from '../ui/ui.module';
 import { TemplatesModule } from '../templates/templates.module';
 import { IconsModule } from '../icons/icons/icons.module';
-import { TchatroomsModule } from '../tchatrooms/tchatrooms.module';
 import { FormMessageComponent } from './components/footer/components/form-message/form-message.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MessagesModule } from '../messages/messages.module';
+import { PageListTchatroomComponent } from '../tchatrooms/page-list-tchatroom/page-list-tchatroom.component';
+import { TchatroomsModule } from '../tchatrooms/tchatrooms.module';
 
 
 
@@ -19,18 +20,22 @@ import { MessagesModule } from '../messages/messages.module';
     HeaderComponent,
     NavComponent,
     FooterComponent,
-    FormMessageComponent
-
+    FormMessageComponent,
   ],
   imports: [CommonModule,
   RouterModule,
-  TchatroomsModule,
-  RouterModule,
-  ReactiveFormsModule],
-  exports: [UiModule, IconsModule, TemplatesModule, HeaderComponent, NavComponent, FooterComponent, FormMessageComponent, MessagesModule
+  ReactiveFormsModule,
+  TchatroomsModule
+],
+  exports: [
+    UiModule,
+    IconsModule,
+    TemplatesModule,
+    HeaderComponent,
+    NavComponent,
+    FooterComponent,
+    MessagesModule,
+
   ],
-
-
-
 })
 export class CoreModule { }

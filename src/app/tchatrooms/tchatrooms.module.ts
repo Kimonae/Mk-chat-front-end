@@ -5,6 +5,7 @@ import { PageAddTchatroomComponent } from './page-add-tchatroom/page-add-tchatro
 import { PageEditTchatroomComponent } from './page-edit-tchatroom/page-edit-tchatroom.component';
 import { PageListTchatroomComponent } from './page-list-tchatroom/page-list-tchatroom.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NavComponent } from '../core/components/nav/nav.component';
 
 
 
@@ -13,7 +14,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormTchatroomsComponent,
     PageAddTchatroomComponent,
     PageEditTchatroomComponent,
-    PageListTchatroomComponent
+    PageListTchatroomComponent,
+    NavComponent
   ],
   imports: [
     CommonModule,

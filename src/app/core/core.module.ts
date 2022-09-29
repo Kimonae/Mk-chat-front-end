@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { HeaderComponent } from './components/header/header.component';
 import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { UiModule } from '../ui/ui.module';
 import { TemplatesModule } from '../templates/templates.module';
 import { IconsModule } from '../icons/icons/icons.module';
-import { HeaderComponent } from './components/header/header.component';
+import { TchatroomsModule } from '../tchatrooms/tchatrooms.module';
 import { FormMessageComponent } from './components/footer/components/form-message/form-message.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MessagesModule } from '../messages/messages.module';
+
 
 
 @NgModule({
@@ -18,6 +19,13 @@ import { MessagesModule } from '../messages/messages.module';
     HeaderComponent,
     NavComponent,
     FooterComponent,
+
+  ],
+  imports: [CommonModule,
+  RouterModule,
+  TchatroomsModule],
+  exports: [UiModule, IconsModule, TemplatesModule, HeaderComponent, NavComponent, FooterComponent]
+
     FormMessageComponent
   ],
   imports: [

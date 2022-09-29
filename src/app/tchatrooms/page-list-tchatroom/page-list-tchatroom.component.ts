@@ -15,6 +15,7 @@ export class PageListTchatroomComponent implements OnInit {
 
 
   public TitleRoom: string = 'Rooms :';
+  public Rooms$ !: Observable<Tchatroom[]>;
 
   constructor(private tchatroomService:TchatroomService,private router:Router) {
 

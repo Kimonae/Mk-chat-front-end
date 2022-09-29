@@ -1,15 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PageListTchatroomComponent } from './page-list-tchatroom/page-list-tchatroom.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormTchatroomsComponent } from './page-add-tchatroom/form-tchatrooms/form-tchatrooms.component';
 
 
 
 @NgModule({
-  declarations: [PageListTchatroomComponent],
-  imports: [
-    CommonModule
+  declarations: [
+    FormTchatroomsComponent,
+    PageListTchatroomComponent,
   ],
-  exports:[PageListTchatroomComponent]
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+  ],
+  exports: [
 
+    PageListTchatroomComponent,
+   ],
 })
 export class TchatroomsModule { }

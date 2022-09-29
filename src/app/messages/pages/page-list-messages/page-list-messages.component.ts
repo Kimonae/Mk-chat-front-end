@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
-import { Message } from 'src/app/core/models/message';
 import { TchatroomService } from 'src/app/tchatrooms/services/tchatroom.service';
 
 @Component({

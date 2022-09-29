@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
+
 import { TchatroomService } from 'src/app/tchatrooms/services/tchatroom.service';
 
 @Component({
@@ -16,5 +16,5 @@ export class NavComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
+
 }

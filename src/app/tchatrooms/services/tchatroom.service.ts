@@ -15,6 +15,7 @@ export class TchatroomService {
 //observable
   public  roomCanal: BehaviorSubject<any> = new BehaviorSubject<any>(0);
 
+  private updatedB: BehaviorSubject<[]> = new BehaviorSubject<[]>([]);
   constructor(private http: HttpClient) {
     this.collection = this.http
       .get<Tchatroom[]>(`${this.urlApi}/chatroom/allrooms` )

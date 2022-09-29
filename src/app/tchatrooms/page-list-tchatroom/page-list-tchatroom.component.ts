@@ -11,18 +11,27 @@ import { TchatroomService } from '../services/tchatroom.service';
 })
 export class PageListTchatroomComponent implements OnInit {
 
+  public collection$: Observable<Tchatroom[]>;
+
+
   public TitleRoom: string = 'Rooms :';
   public Rooms$ !: Observable<Tchatroom[]>;
 
-  constructor (private tchatroomService: TchatroomService,
-    private router: Router) {
+  constructor(private tchatroomService:TchatroomService,private router:Router) {
 
-      this.Rooms$ = this.tchatroomService.collection;
+    this.collection$=this.tchatroomService.collection
 
+    console.log(this.collection$)
 
-    }
+  }
 
   ngOnInit(): void {
   }
+
+  onRoom(item:any){
+    console.log(item)
+    this.tchatroomService.roomCanal.next(item.id);
+   this.router.navigate(['canal',item.id])
+    }
 
 }

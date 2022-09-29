@@ -1,7 +1,3 @@
-<div class="titreCanal"><span>canal1: formation</span></div>
-
-<div class="blocMessage">
-  <p class="titreMessage">Date:</p>
-  <div class="contenuMessage">Messages:</div>
-</div>
-
+<ul *ngFor="let item of canal">
+  <li>{{item.text}}</li>
+</ul>

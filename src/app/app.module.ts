@@ -16,14 +16,12 @@ import { TableLightComponent } from './shared/components/table-light/table-light
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [
 
   ],
   bootstrap: [
-    AppComponent
-  ],
-
+    AppComponent]
 })
 export class AppModule { }

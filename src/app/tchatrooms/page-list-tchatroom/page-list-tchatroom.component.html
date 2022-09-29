@@ -1,14 +1,7 @@
-<!-- pipe async à faire, boucler sur les rooms -->
-<div *ngIf="Rooms$ | async as collection">
-<tr *ngFor="let item of collection" >
-  <th scope="row">1</th>
-  <div class ="hidden"> {{item.id}} </div>
-  <td>{{item.name |uppercase }}</td>
-  <!--<td>{{item.CreationDate}}</td>-->
 
 
-  <script> console.log(Room$) </script>
+<div class="list-group" *ngFor='let item of collection$ |async as collection' >
 
-</tr>
+  <button (click)='onRoom(item)' type="button" class="list-group-item list-group-item-action">{{item.name | uppercase }} </button>
+
 </div>
-

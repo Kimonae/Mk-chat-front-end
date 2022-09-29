@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Tchatroom } from 'src/app/core/models/tchatroom';
 import { TchatroomService } from '../services/tchatroom.service';
 
 @Component({
@@ -10,9 +12,13 @@ import { TchatroomService } from '../services/tchatroom.service';
 export class PageListTchatroomComponent implements OnInit {
 
   public TitleRoom: string = 'Rooms :';
+  public Rooms$ !: Observable<Tchatroom[]>;
 
   constructor (private tchatroomService: TchatroomService,
     private router: Router) {
+
+      this.Rooms$ = this.tchatroomService.collection;
+
 
     }
 

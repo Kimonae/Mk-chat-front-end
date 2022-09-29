@@ -59,7 +59,8 @@ aside {
 footer {
   background: var(--app-light);
 }
-
+// ajouter un style a partire de certin point de epture
+// media querie
 @media (min-width: $md-breakpoint) {
   .shadow {
     display: none;

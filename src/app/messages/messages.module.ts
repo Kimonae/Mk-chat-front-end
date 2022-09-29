@@ -5,13 +5,18 @@ import { MessagesRoutingModule } from './messages-routing.module';
 import { PageListMessagesComponent } from './pages/page-list-messages/page-list-messages.component';
 
 
+
 @NgModule({
   declarations: [
-    PageListMessagesComponent
+    PageListMessagesComponent,
+
   ],
   imports: [
     CommonModule,
     MessagesRoutingModule
+  ],
+  exports:[
+    PageListMessagesComponent,
   ]
 })
 export class MessagesModule { }

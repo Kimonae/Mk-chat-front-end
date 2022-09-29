@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { BehaviorSubject, map, Observable } from 'rxjs';
 import { Tchatroom } from 'src/app/core/models/tchatroom';
 import { environment } from 'src/environments/environment';
 
@@ -8,9 +8,12 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class TchatroomService {
+
+  public currenttchat : BehaviorSubject<any> = new BehaviorSubject<any>(0);
   public urlApi = environment.urlApi;
   private collection$!: Observable<Tchatroom[]>;
 
+  private updatedB: BehaviorSubject<[]> = new BehaviorSubject<[]>([]);
   constructor(private http: HttpClient) {
     this.collection = this.http
       .get<Tchatroom[]>(`${this.urlApi}/tchatroom/allrooms`)
@@ -48,4 +51,6 @@ export class TchatroomService {
   getItemById(id: number): Observable<Tchatroom>{
    return this.http.get<Tchatroom>(`${this.urlApi}/tchatroom/${id}`);
   }
+
+
 }

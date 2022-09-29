@@ -22,6 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   exports: [
 
     PageListTchatroomComponent,
+    PageAddTchatroomComponent,
    ],
 })
 export class TchatroomsModule { }

@@ -11,7 +11,6 @@ import { TableLightComponent } from './shared/components/table-light/table-light
     AppComponent,
     TableLightComponent,
 
-
   ],
   imports: [
     BrowserModule,
@@ -28,7 +27,7 @@ import { TableLightComponent } from './shared/components/table-light/table-light
     AppComponent
   ],
   exports: [
-    
+
   ]
 
 })

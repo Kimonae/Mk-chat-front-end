@@ -21,13 +21,13 @@ import { TableLightComponent } from './shared/components/table-light/table-light
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-<<<<<<< HEAD
-=======
-    HttpClientModule
->>>>>>> dev
   ],
-  providers: [],
-  bootstrap: [AppComponent],
+  providers: [
+    
+  ],
+  bootstrap: [
+    AppComponent
+  ],
   exports: [
 
   ]

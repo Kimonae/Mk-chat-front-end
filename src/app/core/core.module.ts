@@ -18,8 +18,9 @@ import { TchatroomsModule } from '../tchatrooms/tchatrooms.module';
 
   ],
   imports: [CommonModule,
-  RouterModule],
-  exports: [UiModule, IconsModule, TemplatesModule, HeaderComponent, NavComponent, FooterComponent, TchatroomsModule]
+  RouterModule,
+  TchatroomsModule],
+  exports: [UiModule, IconsModule, TemplatesModule, HeaderComponent, NavComponent, FooterComponent]
 
 })
 export class CoreModule { }

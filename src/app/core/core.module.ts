@@ -19,7 +19,6 @@ import { MessagesModule } from '../messages/messages.module';
     NavComponent,
     FooterComponent,
     FormMessageComponent
-
   ],
   imports: [
   CommonModule,
@@ -27,14 +26,14 @@ import { MessagesModule } from '../messages/messages.module';
   ReactiveFormsModule
 ],
   exports: [
-  UiModule,
-  IconsModule,
-  TemplatesModule,
-  HeaderComponent,
-  NavComponent,
-  FooterComponent,
-  MessagesModule
-],
+    UiModule,
+    IconsModule,
+    TemplatesModule,
+    HeaderComponent,
+    NavComponent,
+    FooterComponent,
+    MessagesModule
+  ],
 
 })
 export class CoreModule { }

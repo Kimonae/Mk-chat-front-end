@@ -10,6 +10,7 @@ import { IconsModule } from '../icons/icons/icons.module';
 import { HeaderComponent } from './components/header/header.component';
 import { FormMessageComponent } from './components/footer/components/form-message/form-message.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MessagesModule } from '../messages/messages.module';
 
 
 @NgModule({
@@ -18,13 +19,21 @@ import { ReactiveFormsModule } from '@angular/forms';
     NavComponent,
     FooterComponent,
     FormMessageComponent
-
   ],
-  imports: [CommonModule,
+  imports: [
+  CommonModule,
   RouterModule,
   ReactiveFormsModule
 ],
-  exports: [UiModule, IconsModule, TemplatesModule, HeaderComponent, NavComponent, FooterComponent],
+  exports: [
+    UiModule,
+    IconsModule,
+    TemplatesModule,
+    HeaderComponent,
+    NavComponent,
+    FooterComponent,
+    MessagesModule
+  ],
 
 })
 export class CoreModule { }

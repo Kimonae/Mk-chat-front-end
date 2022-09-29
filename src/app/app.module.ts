@@ -23,13 +23,14 @@ import { TableLightComponent } from './shared/components/table-light/table-light
     CoreModule,
   ],
   providers: [
-    
+
   ],
   bootstrap: [
     AppComponent
   ],
   exports: [
-
+    
   ]
+
 })
 export class AppModule { }

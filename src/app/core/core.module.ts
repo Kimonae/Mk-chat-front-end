@@ -19,18 +19,23 @@ import { MessagesModule } from '../messages/messages.module';
     HeaderComponent,
     NavComponent,
     FooterComponent,
-    FormMessageComponent
-
+    FormMessageComponent,
   ],
   imports: [CommonModule,
   RouterModule,
+  ReactiveFormsModule,
   TchatroomsModule,
-  RouterModule,
-  ReactiveFormsModule],
-  exports: [UiModule, IconsModule, TemplatesModule, HeaderComponent, NavComponent, FooterComponent, FormMessageComponent, MessagesModule
   ],
 
-
-
+  exports: [
+    UiModule,
+    IconsModule,
+    TemplatesModule,
+    HeaderComponent,
+    NavComponent,
+    FooterComponent,
+    FormMessageComponent,
+    MessagesModule
+  ],
 })
 export class CoreModule { }

@@ -2,12 +2,12 @@
 <div *ngIf="Rooms$ | async as collection">
 <tr *ngFor="let item of collection" >
   <th scope="row">1</th>
-  <td>{{item.name }}</td>
-  <td>{{item.CreationDate}}</td>
+  <td>{{item.name |uppercase }}</td>
+  <!--<td>{{item.CreationDate}}</td>-->
 
 
+  <script> console.log(Room$) </script>
 
 </tr>
 </div>
 
-<p> Là nav </p>

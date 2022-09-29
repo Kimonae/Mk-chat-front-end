@@ -8,12 +8,12 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class TchatroomService {
-  private urlApi = environment.urlApi;
+  public urlApi = environment.urlApi;
   private collection$!: Observable<Tchatroom[]>;
 
   constructor(private http: HttpClient) {
     this.collection = this.http
-      .get<Tchatroom[]>(`${this.urlApi}/tchatroom`)
+      .get<Tchatroom[]>(`${this.urlApi}/tchatroom/allrooms`)
       .pipe(
         map((tab) => {
           return tab.map((obj) => {

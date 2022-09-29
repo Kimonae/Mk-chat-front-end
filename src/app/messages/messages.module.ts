@@ -16,7 +16,7 @@ import { PageListMessagesComponent } from './pages/page-list-messages/page-list-
     MessagesRoutingModule
   ],
   exports: [
-
+    PageListMessagesComponent
   ]
 })
 export class MessagesModule { }

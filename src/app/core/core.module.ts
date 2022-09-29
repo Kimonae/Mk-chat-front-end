@@ -37,7 +37,5 @@ import { MessagesModule } from '../messages/messages.module';
     FormMessageComponent,
     MessagesModule
   ],
-
-
 })
 export class CoreModule { }

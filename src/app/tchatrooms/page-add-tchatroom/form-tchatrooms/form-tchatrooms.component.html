@@ -1,7 +1,10 @@
-
+<form [formGroup]='form' (ngSubmit)="onSubmit()">
   <div class="form-group">
     <label for="name"></label>
 
     <input formControlName='name' type="text" class="form-control" id="name" placeholder="Nom de la room">
 
   </div>
+
+  <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Add room</button>
+</form>

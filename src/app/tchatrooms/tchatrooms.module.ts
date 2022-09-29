@@ -18,6 +18,7 @@ import { FormTchatroomsComponent } from './page-add-tchatroom/form-tchatrooms/fo
   exports: [
 
     PageListTchatroomComponent,
+    PageAddTchatroomComponent,
    ],
 })
 export class TchatroomsModule { }

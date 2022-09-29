@@ -28,7 +28,8 @@ import { MessagesModule } from '../messages/messages.module';
 
     FormMessageComponent
   ],
-  imports: [CommonModule,
+  imports: [
+  CommonModule,
   RouterModule,
   ReactiveFormsModule
 ],

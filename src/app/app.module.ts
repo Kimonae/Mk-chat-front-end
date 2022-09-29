@@ -6,19 +6,16 @@ import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
 import { TableLightComponent } from './shared/components/table-light/table-light/table-light.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     TableLightComponent,
-
-
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-
-    AppRoutingModule,
     HttpClientModule,
   ],
   providers: [
@@ -27,9 +24,6 @@ import { TableLightComponent } from './shared/components/table-light/table-light
   bootstrap: [
     AppComponent
   ],
-  exports: [
-    
-  ]
 
 })
 export class AppModule { }

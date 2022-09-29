@@ -1,0 +1,16 @@
+.titreCanal{
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 0 10px 10px;
+}
+
+.blocMessage{
+  padding: 10px;
+}
+
+.contenuMessage{
+  border: 1px solid var(--app-primary);
+  border-radius: 5px;
+  background-color: var(--app-light);
+  padding-left: 10px;
+}

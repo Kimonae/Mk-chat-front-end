@@ -1,7 +1,7 @@
 :root {
-  --app-primary: #aa499a;
+  --app-primary: rgba(10,6,92, 0.9);;
   --app-primary-dark: #330d2d;
-  --app-secondary: #e3f3f8;
+  --app-secondary: rgba(10,6,92, 0.8);
   --app-tertiary: #d0e7f0;
 
   --app-dark: #525252;
@@ -9,8 +9,4 @@
   --app-bg-light: #f0d8ea;
   --app-darklight: #ebedf2;
   --app-darklight2: #bebdbd;
-
-  --app-error: #ec687c;
-  --app-warning: #f09a69;
-  --app-success: #b8d887;
 }

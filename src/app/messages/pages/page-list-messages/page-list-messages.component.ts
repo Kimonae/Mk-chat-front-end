@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { TchatroomService } from 'src/app/tchatrooms/services/tchatroom.service';
 
 @Component({
@@ -9,39 +8,22 @@ import { TchatroomService } from 'src/app/tchatrooms/services/tchatroom.service'
 })
 export class PageListMessagesComponent implements OnInit {
   canal!:any
-  room!:any
-  id!:number
+  room:any
 
+  constructor(private tchatRoomService:TchatroomService) {
 
-
-
-  constructor(private tchatRoomService:TchatroomService,private router:Router) {
-
+ //recupérer IdRoom
     this.tchatRoomService.roomCanal.subscribe((data)=>{
-      console.log(data);
-       this.room=data[0]
+
+ //recupérer Nomde la room
+      this.tchatRoomService.getItemById(data).subscribe(rooms=>{
+      this.room=rooms
+     })
       this.tchatRoomService.getMessageByRoom(data).subscribe((canal)=>{
         this.canal = canal;
-
-        console.log(canal);
-
-
-
-
-
       })
-
-
     })
-
-
-
-
   }
-
   ngOnInit(): void {
   }
-
-
-
 }

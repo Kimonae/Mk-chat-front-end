@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
-import { TchatroomService } from 'src/app/tchatrooms/services/tchatroom.service';
 
 @Component({
   selector: 'app-nav',
@@ -9,9 +7,8 @@ import { TchatroomService } from 'src/app/tchatrooms/services/tchatroom.service'
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
-  public r!:any
 
-  constructor(private tchatRoomService:TchatroomService,private router:Router) { }
+  constructor() { }
 
   ngOnInit(): void {
   }

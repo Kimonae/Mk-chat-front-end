@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Tchatroom } from 'src/app/core/models/tchatroom';
+
 
 @Component({
   selector: 'app-form-tchatrooms',
@@ -9,8 +9,8 @@ import { Tchatroom } from 'src/app/core/models/tchatroom';
 })
 export class FormTchatroomsComponent implements OnInit {
 
-  @Output() enter = new EventEmitter<Tchatroom>()
-  @Input() tchat!: Tchatroom;
+  @Output() enter = new EventEmitter();
+  //@Input() tchat!: Tchatroom;
   public error!: string;
   public form!: FormGroup;
 
@@ -20,10 +20,9 @@ export class FormTchatroomsComponent implements OnInit {
   ngOnInit(): void {
 
     this.form = this.fb.group({
-
-      id : [this.tchat.id],
-      name: [this.tchat.name, Validators.required],
-      CreationDate: [this.tchat.CreationDate],
+      id : [],
+      name: ["", Validators.required],
+      CreationDate: [],
 
 
     })
@@ -31,9 +30,11 @@ export class FormTchatroomsComponent implements OnInit {
 
   public onSubmit() {
 
-
     if(this.form.status === "VALID") {
+
       this.enter.emit(this.form.value);
+
+
 
       }else {
 

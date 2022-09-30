@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Tchatroom } from 'src/app/core/models/tchatroom';
 import { TchatroomService } from '../services/tchatroom.service';
 import { Router } from '@angular/router';
+import { Time } from '@angular/common';
 
 @Component({
   selector: 'app-page-add-tchatroom',
@@ -26,6 +27,7 @@ export class PageAddTchatroomComponent implements OnInit {
    this.router.navigate(['canal']); //mettre id de la room créee pour redirection ?
 
     })
+
 
 }
 

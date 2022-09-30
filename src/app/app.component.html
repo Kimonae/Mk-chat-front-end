@@ -1,12 +1,18 @@
-<!--<app-ui>-->
+<app-ui>
 
   <app-header class ='tr_header'> </app-header>
 
   <app-nav class ='tr_nav'> </app-nav>
 
-  <app-footer class ='tr_footer'> </app-footer>
+
+  <router-outlet class="tr_router"> </router-outlet>
+
+
+  <app-footer class='tr_footer'>
+
+  <app-page-list-messages class="tr_router"></app-page-list-messages>
+
+  </app-footer>
 
   <router-outlet class ="tr_router"> </router-outlet>
-
-<!--</app-ui>-->
-
+</app-ui>

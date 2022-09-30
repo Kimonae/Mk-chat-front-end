@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "compodoc": "compodoc -r 8000 -p tsconfig.json -o -s"
   },
   "private": true,
   "dependencies": {
@@ -18,7 +19,10 @@
     "@angular/platform-browser": "~13.0.0-next.0",
     "@angular/platform-browser-dynamic": "~13.0.0-next.0",
     "@angular/router": "~13.0.0-next.0",
+    "bootstrap": "^5.2.1",
+    "font-awesome": "^4.7.0",
     "rxjs": "~7.4.0",
+    "save": "^2.9.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

@@ -1,0 +1,10 @@
+
+
+<div class="list-group" *ngFor='let item of collection$ |async as collection' >
+
+  <button (click)="onRoom(item)" type="button" class="btn btn-outline-success">{{item.name | uppercase }}
+      <button class="btn btn-outline-success" (click)="onDelet(item)"><span class="fa fa-trash-o"></span></button>
+    </button>
+
+
+</div>

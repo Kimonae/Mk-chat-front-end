@@ -15,7 +15,7 @@ export class TchatroomService {
 //observable
   public  roomCanal: BehaviorSubject<any> = new BehaviorSubject<any>(0);
 
-  private updatedB: BehaviorSubject<[]> = new BehaviorSubject<[]>([]);
+
   constructor(private http: HttpClient) {
     this.collection = this.http
       .get<Tchatroom[]>(`${this.urlApi}/chatroom/allrooms` )
@@ -47,7 +47,7 @@ export class TchatroomService {
 
   add(item : Tchatroom): Observable<Tchatroom> {
 
-    return this.http.post<Tchatroom>(`${this.urlApi}/chatroom`, item);
+    return this.http.post<Tchatroom>(`${this.urlApi}/chatroom/allrooms`, item);
   }
 
   getItemById(id: number): Observable<Tchatroom>{
@@ -57,6 +57,15 @@ export class TchatroomService {
 
   getMessageByRoom(id: number):Observable<Message[]>{
     return this.http.get<Message[]>(`${this.urlApi}/chatroom/allrooms/${id}`);
+
+   }
+   deletRoom(id:number):Observable<void>{
+
+    return this.http.delete<void>(`${this.urlApi}/chatroom/${id}`);
+   }
+   getAllRoom():Observable<Tchatroom[]>{
+
+    return this.http.get<Tchatroom[]>(`${this.urlApi}/chatroom/allrooms`);
    }
 
 }

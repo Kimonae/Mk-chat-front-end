@@ -1,6 +1,9 @@
 
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { MessagesService } from 'src/app/messages/services/messages.service';
+import { TchatroomService } from 'src/app/tchatrooms/services/tchatroom.service';
 
 @Component({
   selector: 'app-form-message',
@@ -9,25 +12,48 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class FormMessageComponent implements OnInit {
 
+id!:number
 
-@Output() submitted =new EventEmitter();
+@Output() submit =new EventEmitter();
 public form!:FormGroup;
 
+submitted=false;
 
+  constructor(private router:Router,private fb:FormBuilder,private tchatRoomService:TchatroomService,private messageService:MessagesService) {
+    this.tchatRoomService.roomCanal.subscribe(data=>{
 
-  constructor(private fb:FormBuilder) { }
+      this.id=data;
+
+       })
+
+  }
 
   ngOnInit(): void {
     this.form=this.fb.group({
-      id:[0],
-      idRoom:[1],
-      textarea:["message teste",Validators.required]
+      id:[],
+      idRoom:[this.id],
+      text:["",Validators.required]
 
     })
   }
 
+  get f() { return this.form.controls; }
+
   onSubmit() {
-  this.submitted.emit(this.form.value)
-    }
+  this.submitted=true;
+    if(this.form.invalid){
+
+    } else{
+
+    const obj= this.form.value
+    obj.idRoom = this.id
+    this.submit.emit(obj)
+
+        }
+
+  }
+  
+
+
 
 }

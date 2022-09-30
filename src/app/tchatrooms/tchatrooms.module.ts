@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PageListTchatroomComponent } from './page-list-tchatroom/page-list-tchatroom.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormTchatroomsComponent } from './page-add-tchatroom/form-tchatrooms/form-tchatrooms.component';
+import { PageAddTchatroomComponent } from './page-add-tchatroom/page-add-tchatroom.component';
 
 
 
@@ -10,6 +11,7 @@ import { FormTchatroomsComponent } from './page-add-tchatroom/form-tchatrooms/fo
   declarations: [
     FormTchatroomsComponent,
     PageListTchatroomComponent,
+    PageAddTchatroomComponent
   ],
   imports: [
     CommonModule,
@@ -18,6 +20,7 @@ import { FormTchatroomsComponent } from './page-add-tchatroom/form-tchatrooms/fo
   exports: [
 
     PageListTchatroomComponent,
+    PageAddTchatroomComponent
    ],
 })
 export class TchatroomsModule { }

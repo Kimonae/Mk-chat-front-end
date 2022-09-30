@@ -10,10 +10,10 @@ import { Router } from '@angular/router';
 })
 export class PageAddTchatroomComponent implements OnInit {
 
-  public chat = new Tchatroom();
+
   constructor(
 
-    private tRService : TchatroomService,
+    private tchatroomService : TchatroomService,
     private router: Router
 
   ) { }
@@ -21,11 +21,9 @@ export class PageAddTchatroomComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  Addtchat(obj: Tchatroom) {
-
-    this.tRService.add(obj).subscribe(()=>{
-
-      this.router.navigate(['tchatroom']); //mettre id de la room créee pour redirection ?
+  Addtchat(obj: any) {
+    this.tchatroomService.add(obj).subscribe(data=>{
+   this.router.navigate(['canal']); //mettre id de la room créee pour redirection ?
 
     })
 

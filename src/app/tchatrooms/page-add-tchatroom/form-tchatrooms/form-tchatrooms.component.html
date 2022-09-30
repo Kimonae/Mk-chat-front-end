@@ -1,1 +1,10 @@
-<p>form-tchatrooms works!</p>
+<form [formGroup]='form' (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="name"></label>
+
+    <input formControlName='name' type="text" class="form-control" id="name" placeholder="Nom de la room">
+
+  </div>
+
+  <button  type="submit" class="btn btn-primary">+</button>
+</form>
